@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DXC Links</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #000000;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+    header {
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 20px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+      border-radius: 0 0 16px 16px;
+      position: fixed;
+      top: 16px;
+      left: 16px;
+      right: 16px;
+      z-index: 1000;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      color: #ffffff;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .header-icons {
+      margin-left: auto;
+    }
+    .header-icons a {
+      margin-left: 16px;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 20px;
+      opacity: 0.8;
+      transition: opacity 0.3s;
+    }
+    .header-icons a:hover {
+      opacity: 1;
+      text-decoration: none;
+    }
+    main {
+      padding: 120px 20px 80px 20px;
+    }
+    .links-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .link-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      width: 280px;
+      text-align: center;
+      transition: transform 0.2s, background 0.2s;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .link-card:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .link-card a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+    .link-icon {
+      width: 40px;
+      height: 40px;
+      filter: brightness(0) invert(1);
+    }
+    .oracle-icon {
+      width: 80px !important;
+      height: 80px !important;
+    }
+    footer {
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 16px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 16px 16px 0 0;
+      margin: 40px 16px 16px;
+      box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.5);
+    }
+    .footer-title {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+    .footer-icons a {
+      margin: 0 10px;
+      font-size: 24px;
+      color: #ffffff;
+      opacity: 0.8;
+      transition: opacity 0.3s;
+    }
+    .footer-icons a:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>DXC Links</h1>
+    <div class="header-icons">
+      <a href="https://www.linkedin.com/in/dileepkumarg3012/" target="_blank" title="LinkedIn">🔗</a>
+      <a href="mailto:gdileepkumar3012@gmail.com" title="Email">✉️</a>
+      <a href="https://www.dileep.tech" target="_blank" title="Website">🌐</a>
+    </div>
+  </header>
+  <main>
+    <div class="links-container" id="links"></div>
+  </main>
+  <footer>
+    <div class="footer-title">AI Tools</div>
+    <div class="footer-icons">
+      <a href="https://www.chatgpt.com" target="_blank" title="ChatGPT">🤖</a>
+      <a href="https://copilot.microsoft.com" target="_blank" title="Copilot">🧠</a>
+      <a href="https://chat.deepseek.com" target="_blank" title="Deepseek">🔍</a>
+      <a href="https://gemini.google.com/app" target="_blank" title="Gemini">✨</a>
+    </div>
+  </footer>
+  <script>
+    const links = [
+      { name: "Timesheets", url: "https://na12.replicon.com/DXCTechnology/home/", icon: "https://img.icons8.com/ios-filled/50/clock--v1.png" },
+      { name: "Wifi-Bill", url: "https://expenses.dxc.com/", icon: "https://img.icons8.com/ios-filled/50/invoice.png" },
+      { name: "DXC Gear", url: "https://gear.dxc.com", icon: "https://img.icons8.com/ios-filled/50/toolbox.png" },
+      { name: "DXC Recognition", url: "https://cloud.workhuman.com/microsites/t/home?client=dxc&setCAG=true", icon: "https://img.icons8.com/ios-filled/50/prize.png" },
+      { name: "DXC Employee Connect", url: "https://dxchr.service-now.com/hrportal", icon: "https://img.icons8.com/ios-filled/50/communication.png" },
+      { name: "OneSecureDXC", url: "https://dxcportal.sharepoint.com/sites/Global-Cyber-Security/SitePages/Information-Security-Awareness.aspx", icon: "https://img.icons8.com/ios-filled/50/privacy.png" },
+      { name: "Sales Momentum", url: "https://dxc.seismic.com/apps/home", icon: "https://img.icons8.com/ios-filled/50/sales-performance.png" },
+      { name: "Viva Engage", url: "https://engage.cloud.microsoft/", icon: "https://img.icons8.com/ios-filled/50/chat.png" },
+      { name: "DROC", url: "https://dxcportal.sharepoint.com/sites/Resiliency/SitePages/Five-Facts-to-Know-About-DROC-(DXC-Response-Operations-Center).aspx", icon: "https://img.icons8.com/ios-filled/50/shield.png" },
+      { name: "DXC Learning", url: "https://dxclearning.edcast.com/", icon: "https://img.icons8.com/ios-filled/50/training.png" },
+      { name: "DXC Resiliency", url: "https://dxcportal.sharepoint.com/sites/Resiliency", icon: "https://img.icons8.com/ios-filled/50/cyber-security.png" },
+      { name: "DXC.COM", url: "https://dxc.com/", icon: "https://img.icons8.com/ios-filled/50/domain.png" },
+      { name: "People Search", url: "https://dxcportal.sharepoint.com/sites/mydxc/SitePages/people-search.aspx", icon: "https://img.icons8.com/ios-filled/50/search.png" },
+      { name: "Redhat Support", url: "https://sso.redhat.com/", icon: "https://img.icons8.com/ios-filled/50/linux.png" },
+      { name: "Oracle Vendor", url: "https://signon.oracle.com/signin", icon: "https://img.icons8.com/ios-filled/50/oracle-logo.png", class: "oracle-icon" },
+      { name: "IBM Kodiak", url: "https://www.managedtechnicalsupportaccess.com/KodiakWeb/", icon: "https://img.icons8.com/ios-filled/50/ibm.png" },
+      { name: "SpeakUP Line", url: "https://secure.ethicspoint.com/", icon: "https://img.icons8.com/ios-filled/50/microphone.png" },
+      { name: "Workday", url: "https://www.myworkday.com/dxctechnology/d/home.htmld", icon: "https://img.icons8.com/ios-filled/50/work.png" },
+      { name: "Employee PF", url: "https://passbook.epfindia.gov.in/", icon: "https://img.icons8.com/ios-filled/50/money-transfer.png" },
+      { name: "Change Approvals Sheet", url: "https://dxcportal-my.sharepoint.com/:x:/r/", icon: "https://img.icons8.com/ios-filled/50/google-sheets.png" },
+      { name: "Employee Insurance", url: "https://prudentbrokersb2c.b2clogin.com/", icon: "https://img.icons8.com/ios-filled/50/health-insurance.png" },
+      { name: "E3", url: "https://e3.dxc.com/blocks/e3course/", icon: "" },
+      { name: "Pay Slip", url: "https://uid.dxc.com/app/dxcprod_payout", icon: "https://img.icons8.com/ios-filled/50/money.png" },
+      { name: "HVD Connect", url: "https://atthvd.workspaceair.com/", icon: "https://img.icons8.com/ios-filled/50/cloud-connection.png" },
+      { name: "Certificate Approval", url: "https://apps.powerapps.com/play/e/default-93f33571-550f-43cf-b09f-cd331338d086/a/e111e9f6-e58a-4b4c-8bf1-8deeec3c8830?tenantId=93f33571-550f-43cf-b09f-cd331338d086&sourcetime=1747375441073", icon: "https://img.icons8.com/ios-filled/50/certificate.png" },
+      { name: "DXC Recognition", url: "https://cloud.workhuman.com/microsites/t/home?client=dxc&setCAG=false", icon: "https://img.icons8.com/ios-filled/50/medal.png" },
+      { name: "DXC Learning Feed", url: "https://dxclearning.edcast.com/feed", icon: "https://img.icons8.com/ios-filled/50/e-learning.png" },
+      { name: "Udemy", url: "https://dxc.udemy.com/organization/home/", icon: "https://img.icons8.com/ios-filled/50/u.png" },
+      { name: "DXC Uptime", url: "https://uptime.dxc.com", icon: "https://img.icons8.com/ios-filled/50/laptop.png" }
+    ];
+
+    const container = document.getElementById("links");
+
+    links.forEach(link => {
+      const card = document.createElement("div");
+      card.className = "link-card";
+      const iconClass = link.class ? `link-icon ${link.class}` : "link-icon";
+      card.innerHTML = `
+        ${link.name === "E3" ? '<div style="font-size: 32px; font-weight: bold;">E3</div>' : link.icon ? `<img class="${iconClass}" src="${link.icon}" alt="icon">` : ""}
+        <a href="${link.url}" target="_blank">${link.name}</a>
+      `;
+      container.appendChild(card);
+    });
+  </script>
+</body>
+</html>
